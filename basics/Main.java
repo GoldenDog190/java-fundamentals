@@ -1,12 +1,12 @@
 import java.util.*;
-// import java.util.time.LocalDateTime;
-// import java.time.*;
+import java.time.LocalDateTime;
+// import java.util.time.*;
 
 public class Main {
   public static void main(String[] args) {
     System.out.println(pluralize(2, "cat"));
-    // System.out.println(flipNHeads(1));
-    // System.out.println(clock());
+    // flipNHeads(1);
+    clock();
   }
     public static String pluralize (int catCount, String word){
      
@@ -47,19 +47,21 @@ public class Main {
     }
 
 
-    //  public static int clock(){
-    //     Time time = new Time();
-    //     LocalDateTime dateTime = LocalDateTime.now();
-    // int clockTime = dateTime.getTimeValue();
-    // String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
-    
+     public static void clock(){
+        int oldSecond = 9999;
+        while(true){
+        LocalDateTime dateTime = LocalDateTime.now();
+     int hour = now.getHour();
+     int minute = now.getMinute();
+     int second = now.getSecond();
 
-        // if(time == 12){
-        //  return true;
-        // }
-        //  return false;
+        if(second !== oldSecond){
+         Sysytem.out.printf(hour + ":" + minute + ":" + second);
+         oldSecond = second;
+        }
+      }
         
-     //}
+     }
 
 
     }
