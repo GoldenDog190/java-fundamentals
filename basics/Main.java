@@ -19,23 +19,16 @@ public class Main {
      return "";
     }
    
-    public static void flipNHeads (int n, String flip) {
+    public static void flipNHeads (int n) {
     // set a float between 0 and 1 
     // greater or lesser than .5
-    // Used this as an example code: https://www.roseindia.net/tutorial/java/core/coinFlip.html#:~:text=Java%20Coin%20Flip%20Coin%20Flipping%20is%20basically%20a,we%20are%20going%20to%20toss%20a%20coin%20programmatically 
-     
-         int heads = 0;
+    // Used this as an example code: https://www.roseindia.net/tutorial/java/core/coinFlip.html#:~:text=Java%20Coin%20Flip%20Coin%20Flipping%20is%20basically%20a,we%20are%20going%20to%20toss%20a%20coin%20programmatically & https://docs.oracle.com/javase/8/docs/api/java/util/Random.html
+        Random rand = new Random();
+         int flip = 0;
          int tails = 0;
-        //  int n = Math.random() * 2;
 
-      while (true){
-        String message = "It took"+ n + "flips to flip N heads in a row" ;
-        System.out.println(message);
-
-       break;
-      }
-
-      //if statement 
+      while (n > tails){
+        //if statement 
       if (n > 0.5) {
         flip = "heads";
         // head++; 
@@ -44,6 +37,13 @@ public class Main {
         // return flip;
         // tails++; 
       }
+        String message = "It took"+ n + "flips to flip N heads in a row" ;
+        System.out.println(message);
+
+       break;
+      }
+
+      
     }
 
 
