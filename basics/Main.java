@@ -22,25 +22,24 @@ public class Main {
     // public static void flipNHeads (int n) {
     // // set a float between 0 and 1 
     // // greater or lesser than .5
-
+    //  
     //      int heads = 0.5;
     //      int tails = 0.4;
-    //     //  int n = 1;
+    //      int n = Math.random() * 2;
 
     //   while (true){
-    //      int n = 1;
     //     System.out.println("It took"+ n + "flips to flip N heads in a row");
 
     //    break;
     //   }
 
     //   //if statement
-    //   if (Math.random() < 0.5) {
+    //   if (n == 0.5) {
     //     System.out.println("heads");
     //   } else {
     //     System.out.println("It took"+ n + "flips to flip N heads in a row");
     //   }
-    //   return;
+    //   return n;
     // }
 
     //  public static int clock(){
