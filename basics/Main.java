@@ -1,5 +1,6 @@
 import java.util.*;
-import java.util.Random;
+import java.util.*;
+import java.util.time.LocalDateTime;
 
 public class Main {
   public static void main(String[] args) {
@@ -37,14 +38,20 @@ public class Main {
         System.out.println("It took"+ n + "flips to flip N heads in a row");
       }
       return;
+    }
 
      public static int clock(){
-    //  LocalDateTime now = LocalDateTime.now();
-    //  int hour = now.getHour();
-    //  int minute = now.getMinute();
-    //  int second = now.getSecond();
-    // String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"))
+        Clock clock = new Clock();
+        LocalDateTime now = LocalDateTime.now();
+        int hour = now.getHour();
+        int minute = now.getMinute();
+        int second = now.getSecond();
+        System.out.println(hour + ":" + minute + ":" + second);
 
+        if(hour == 12){
+         return;
+        }
+        return;
      }
 
 
