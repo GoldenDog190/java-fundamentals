@@ -28,18 +28,21 @@ public class Main {
     //      int n = Math.random() * 2;
 
     //   while (true){
+
     //     System.out.println("It took"+ n + "flips to flip N heads in a row");
 
     //    break;
     //   }
 
     //   //if statement
-    //   if (n == 0.5) {
-    //     System.out.println("heads");
+    //   if (n > 0.5) {
+    //     faceName = "heads";
+    //     head++; 
     //   } else {
-    //     System.out.println("It took"+ n + "flips to flip N heads in a row");
+    //     faceName = "tails";
+    //     tails++; 
     //   }
-    //   return n;
+    //   return faceName;
     // }
 
     //  public static int clock(){
@@ -54,7 +57,7 @@ public class Main {
     //     if(time == 0){
     //      return clock;
     //     }
-    //     return ;
+    //     
     //  }
 
 
