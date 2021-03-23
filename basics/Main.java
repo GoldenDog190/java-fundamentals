@@ -19,31 +19,32 @@ public class Main {
      return "";
     }
    
-    // public static void flipNHeads (int n) {
-    // // set a float between 0 and 1 
-    // // greater or lesser than .5
-    //  
-    //      int heads = 0.5;
-    //      int tails = 0.4;
-    //      int n = Math.random() * 2;
+    public static void flipNHeads (int n, String flip) {
+    // set a float between 0 and 1 
+    // greater or lesser than .5
+    // Used this as an example code: https://www.roseindia.net/tutorial/java/core/coinFlip.html#:~:text=Java%20Coin%20Flip%20Coin%20Flipping%20is%20basically%20a,we%20are%20going%20to%20toss%20a%20coin%20programmatically 
+     
+         int heads = 0;
+         int tails = 0;
+        //  int n = Math.random() * 2;
 
-    //   while (true){
+      while (true){
+        String message = "It took"+ n + "flips to flip N heads in a row" ;
+        System.out.println(message);
 
-    //     System.out.println("It took"+ n + "flips to flip N heads in a row");
+       break;
+      }
 
-    //    break;
-    //   }
-
-    //   //if statement
-    //   if (n > 0.5) {
-    //     faceName = "heads";
-    //     head++; 
-    //   } else {
-    //     faceName = "tails";
-    //     tails++; 
-    //   }
-    //   return faceName;
-    // }
+      //if statement 
+      if (n > 0.5) {
+        flip = "heads";
+        // head++; 
+      } else if (n < 0.4) {
+        flip = "tails";
+        // return flip;
+        // tails++; 
+      }
+    }
 
     //  public static int clock(){
     //     Clock clock = new Clock();
