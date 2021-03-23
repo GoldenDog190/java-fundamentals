@@ -1,6 +1,6 @@
 import java.util.*;
-// import java.util.*;
 // import java.util.time.LocalDateTime;
+// import java.time.*;
 
 public class Main {
   public static void main(String[] args) {
@@ -46,20 +46,20 @@ public class Main {
       }
     }
 
-    //  public static int clock(){
-    //     Clock clock = new Clock();
-    //     LocalDateTime now = clock.LocalDateTime.now();
-    //     int hour = now.getHour();
-    //     int minute = now.getMinute();
-    //     int second = now.getSecond();
-    //     System.out.println(hour + ":" + minute + ":" + second);
-        // String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
 
-    //     if(time == 0){
-    //      return clock;
-    //     }
-    //     
-    //  }
+    //  public static int clock(){
+    //     Time time = new Time();
+    //     LocalDateTime dateTime = LocalDateTime.now();
+    // int clockTime = dateTime.getTimeValue();
+    // String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+    
+
+        // if(time == 12){
+        //  return true;
+        // }
+        //  return false;
+        
+     //}
 
 
     }
