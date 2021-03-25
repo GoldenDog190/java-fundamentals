@@ -40,8 +40,9 @@ public class App {
             if(line.contains("if") || line.contains("else")) continue;
             String lintError = "Line 3: Missing semicolon.";
             System.out.println(line);
-
+            result = result + line + "\n";
         }
+        return result;
 
     }
 }

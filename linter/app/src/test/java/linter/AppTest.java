@@ -16,4 +16,23 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
+
+    @Test public void fileTestNotErrors(){
+        String errorFile = "app/src/main/resources/noError.js";
+        assertEquals("Empty file with no errors.", "", App.readFile(errorFile);
+    }
+
+    @Test public void fileTestErrors(){
+       String errorOneFile = "app/src/main/resources/errorOneFile.js";
+       String errorTwoFile = "app/src/main/resources/errorTwoFile.js";
+       String errorThreeFile = "app/src/main/resources/gates.js";
+
+       String error1 = "return O\n";
+       String error2 = "return O\n";
+       String error3 = "";
+
+       assertEquals("Linting errors.", error1, App.readFile(errorOneFile));
+       assertEquals("Linting errors.", error2, App.readFile(errorTwoFile));
+       assertEquals("Linting errors.", error3, App.readFile(errorThreeFile));
+    }
 }
