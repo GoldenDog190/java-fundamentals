@@ -21,9 +21,21 @@ public class MapsTest {
         String result = MapsTest.weatherData(weeklyMonthTemperatures);
         assertEquals("return string that comes up the right numbers", expected, result);
     }
-
+ @Test
     public void tallyTest(){
+//        votes.add("Bush");
+//        votes.add("Bush");
+//        votes.add("Bush");
+//        votes.add("Shrub");
+//        votes.add("Hedge");
+//        votes.add("Shrub");
+//        votes.add("Bush");
+//        votes.add("Hedge");
+//        votes.add("Bush");
 
+     String[] input = {"Bush", "Bush", "Bush", "Shrub", "Hedge", "Shrub", "Bush", "Hedge", "Bush"};
+     String result = Maps.countTally(input);
+     assertEquals(result +" received the most votes!");
     }
 
 }

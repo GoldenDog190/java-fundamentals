@@ -1,8 +1,12 @@
 package basiclibrary;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
-import static java.util.stream.Nodes.flatten;
+import static org.apache.commons.math3.exception.util.ArgUtils.flatten;
+
 
 public class Maps {
     public static String weatherData (int[][]temperatureArr) throws Exception {
@@ -14,36 +18,52 @@ public class Maps {
         for(int temp : temperature) {
             if(min>temp) min = temp;
             if(max<temp) max = temp;
-            if(!tally.containsKey(temp)) tally.put(temp, tally.get(temp) + 1);
+            if(!tally.key(temp)) tally.put(temp, tally.get(temp) + 1);
             else tally.put(temp, 1);
 
         }
         String result = String.format("High: %d\n Low: %d\n", min, max);
         for(int i = min; i <= max; i++) {
-            if(!tally.containsKey(i)) result += String.format("Can't see temperature: %d\n", 1);
+            if(!tally.key(i)) result += String.format("Can't see temperature: %d\n", 1);
         }
         System.out.println(result);
         return result;
 
     }
 
-    public static String tally(String[] votes){
-      HashMap<String> vote = new HashMap<>();
+    public static Set<String> getVote(ArrayList<String> votes){
+        Set<String> votedNames = new HashSet<>();
+        votedNames.addAll(votes);
+        return votedNames;
+    }
 
-        votes.add("Bush",0);
-        votes.add("Bush", 0);
-        votes.add("Bush", 0);
-        votes.add("Shrub", 0);
-        votes.add("Hedge", 0);
-        votes.add("Shrub", 0);
-        votes.add("Bush", 0);
-        votes.add("Hedge", 0);
-        votes.add("Bush", 0);
+    public static void countTally(String[] votes){
+        Set<String> votedNames = getVote();
+        HashMap<String, Integer> voteTally = new HashMap<>();
+        for(String voteTally: votedNames) {
+            System.out.println(voteTally);
 
-        while(){
-            String winner = tally(vote);
-            System.out.println(winner + " received the most votes!");
+            voteTally.add("Bush",0);
+            voteTally.add("Bush",0);
+            voteTally.add("Bush",0);
+            voteTally.add("Shrub",0);
+            voteTally.add("Hedge",0);
+            voteTally.add("Shrub",0);
+            voteTally.add("Bush",0);
+            voteTally.add("Hedge",0);
+            voteTally.add("Bush",0);
         }
+
+        for(String voteTally: votes){
+            int currentVotes = voteTally.get(voteTally);
+            currentVotes++;
+            voteTally.put(voteTally, currentVotes);
+        }
+
+        return voteTally;
+      }
+
+
 
     }
 
