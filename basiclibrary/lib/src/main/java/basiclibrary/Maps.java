@@ -25,7 +25,25 @@ public class Maps {
         System.out.println(result);
         return result;
 
+    }
 
+    public static String tally(String[] votes){
+      HashMap<String> vote = new HashMap<>();
+
+        votes.add("Bush",0);
+        votes.add("Bush", 0);
+        votes.add("Bush", 0);
+        votes.add("Shrub", 0);
+        votes.add("Hedge", 0);
+        votes.add("Shrub", 0);
+        votes.add("Bush", 0);
+        votes.add("Hedge", 0);
+        votes.add("Bush", 0);
+
+        while(){
+            String winner = tally(vote);
+            System.out.println(winner + " received the most votes!");
+        }
 
     }
 
