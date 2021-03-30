@@ -31,7 +31,7 @@ public class RestaurantTest {
         rate.addReview(new Review("review", 5));
         rate.addReview(new Review("review", 3));
         rate.addReview(new Review("review", 0));
-        assertEquals("average star review rating", 5, rate.review.toString());
+        assertEquals("average star review rating", 5, rate.reviews.toString());
     }
 
     @Test

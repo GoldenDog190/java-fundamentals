@@ -4,14 +4,21 @@ public class Review {
     int rate;
     String text;
 
-    public Review(String text){
-        this.text =text;
+    public Review(String text) {
+        this.text = text;
         validateRate(rate);
         this.rate = rate;
+
     }
-    public int getRate(){
+
+    public int getRate() {
         return rate;
     }
+
+    public void text(String text) {
+        this.text=text;
+    }
+
 
     public int updateRate(int rate) {
         validateRate(rate);
@@ -19,14 +26,15 @@ public class Review {
     }
 
     public String validateRate(int number) {
-        if(number < 0 || number > 5) return "Rating is between 0 and 5";
+
+        if (number != -1 && number < 0 || number > 5) return "Rating is between 0 and 5";
     }
 
     @Override
-    public String toString(){
-        return String.format( "Rating%s ", getRate());
+    public String toString() {
+        return String.format("Rating%s ", getRate(), updateRate(), validateRate());
 
-    public boolean rating() {
-        return rate != -1;
     }
+
+
 }
