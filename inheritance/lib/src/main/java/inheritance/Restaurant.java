@@ -23,12 +23,6 @@ public class Restaurant {
         return priceRate;
     }
 
-    public String valReviews(int priceRating) throws invalidException{
-        if(priceRating < 0 || priceRating >4)
-            return "Price  rating between 1 and 5";
-
-        return null;
-    }
 
     @Override
     public String toString(){
@@ -36,6 +30,13 @@ public class Restaurant {
                 getName(), getPriceRate(), starRates());
 
 
+    }
+
+    public String addReview(int priceRating) throws invalidException{
+        if(priceRating < 0 || priceRating >4)
+            return "Price rating between 1 and 5";
+
+        return null;
     }
 
     private String starRates() {

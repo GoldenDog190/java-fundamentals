@@ -22,6 +22,10 @@ public class Review {
         if(number < 0 || number > 5) return "Rating is between 0 and 5";
     }
 
+    @Override
+    public String toString(){
+        return String.format( "Rating%s ", getRate());
+
     public boolean rating() {
         return rate != -1;
     }
