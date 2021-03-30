@@ -8,8 +8,9 @@ import static org.junit.Assert.assertThrows;
 public class RestaurantTest {
     @Test
     public void throwBadRating(){
-        assertThrows("when there is a bad rating", invalidException.class,
-                () => new Restaurant("Amelia's Restaurant", 0));
+        assertThrows("when there is a bad rating",
+                invalidException.class,
+                () = > new Restaurant("Amelia's Restaurant", 0)
     }
 
     @Test

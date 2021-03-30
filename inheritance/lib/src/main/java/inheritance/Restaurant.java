@@ -2,16 +2,17 @@ package inheritance;
 
 import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class Restaurant {
-    List<Review> reviews;
+public class Restaurant implements ReviewAble {
+    List<Review> reviews = new ArrayList<>();
     int priceRate;
     String name;
 
 
-    public Restaurant(String name, int priceRate, List<Review> reviews) {
+    public Restaurant(String name, int priceRate) {
 
         this.name = name;
         this.priceRate = priceRate();
